@@ -1,0 +1,17 @@
+{
+  "name": "sous-components-twig",
+  "version": "0.0.1",
+  "description": "Twig components for a fictitious Sous install",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModulesUnraveled/sous-components.git"
+  },
+  "author": "Brian Lewis",
+  "bugs": {
+    "url": "https://github.com/ModulesUnraveled/sous-components/issues"
+  },
+  "homepage": "https://github.com/ModulesUnraveled/sous-components#readme"
+}
