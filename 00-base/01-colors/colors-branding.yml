@@ -1,13 +1,21 @@
 items:
-  - name: 'Green - Light'
-    value: 'green-light'
-  - name: 'Green'
-    value: 'green'
-  - name: 'Green - Dark'
-    value: 'green-dark'
-  - name: 'Blue - Light'
-    value: 'blue-light'
-  - name: 'Blue'
-    value: 'blue'
-  - name: 'Blue - Dark'
-    value: 'blue-dark'
+  - name: "Green - Light"
+    value: "green-light"
+  - name: "Green"
+    value: "green"
+  - name: "Green - Dark"
+    value: "green-dark"
+  - name: "Blue - Light"
+    value: "blue-light"
+  - name: "Blue"
+    value: "blue"
+  - name: "Blue - Dark"
+    value: "blue-dark"
+  - name: "Yellow"
+    value: "yellow"
+  - name: "Yellow - Dark"
+    value: "yellow-dark"
+  - name: "Orange"
+    value: "orange"
+  - name: "Orange - Dark"
+    value: "orange-dark"
