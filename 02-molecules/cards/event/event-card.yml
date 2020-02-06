@@ -4,6 +4,7 @@ event_card__body: 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla
 event_card__link__text: 'Click Me!'
 event_card__link__url: '#'
 event_card__image__src: 'https://picsum.photos/1280/720'
+event_card__image__alt: 'Event Card Image'
 event_card__date: '2119-12-09 12:00:00'
 event_card__social_links:
   - title: 'Twitter'
