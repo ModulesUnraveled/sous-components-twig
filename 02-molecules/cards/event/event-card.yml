@@ -1,0 +1,17 @@
+event_card__heading: "Here's the super awesome heading!"
+event_card__location: 'The student center'
+event_card__body: 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+event_card__link__text: 'Click Me!'
+event_card__link__url: '#'
+event_card__image__src: 'https://picsum.photos/1280/720'
+event_card__date: '2119-12-09 12:00:00'
+event_card__social_links:
+  - title: 'Twitter'
+    url: '#'
+    icon: 'twitter'
+  - title: 'Facebook'
+    url: '#'
+    icon: 'facebook'
+  - title: 'Instagram'
+    url: '#'
+    icon: 'instagram'

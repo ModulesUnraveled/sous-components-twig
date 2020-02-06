@@ -1,0 +1,80 @@
+{% set format__day = 'd' %}   {# 9 #}
+{% set format__month = 'F' %} {# December #}
+
+{% set event_card__base_class = 'event-card' %}
+
+<div {{ bem(event_card__base_class, event_card__modifiers, event_card__blockname, event_card__extra_classes) }}>
+  {# Content #}
+  <div {{ bem('content', event_card__content__modifiers, event_card__base_class) }}>
+    {# Heading #}
+    {% if event_card__heading %}
+      {{ title_prefix }}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_base_class: 'heading',
+        heading_blockname: event_card__base_class,
+        heading_level: 2,
+        heading: event_card__heading,
+        heading_url: event_card__heading__link|default(event_card__link__url),
+        heading_link_base_class: 'heading-link',
+        heading_link_blockname: event_card__base_class,
+      } %}
+      {{ title_suffix }}
+    {% endif %}
+    {# Location #}
+    {% if event_card__location %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_base_class: 'location',
+        heading_blockname: event_card__base_class,
+        heading_level: 3,
+        heading: event_card__location,
+        heading_url: event_card__location__link,
+      } %}
+    {% endif %}
+    {# Body #}
+    {% if event_card__body %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_base_class: 'body',
+        paragraph_blockname: event_card__base_class,
+        paragraph_content: event_card__body,
+      } %}
+    {% endif %}
+    {# Link #}
+    {% if event_card__link__url %}
+      {% include "@atoms/links/link/link.twig" with {
+        link_base_class: 'link',
+        link_blockname: event_card__base_class,
+        link_content: event_card__link__text,
+        link_url: event_card__link__url,
+      } %}
+    {% endif %}
+  </div>
+  <div {{ bem('meta', [], event_card__base_class) }}>
+    {# Image #}
+    <div {{ bem('image', [], event_card__base_class) }}>
+      {% block event_card__img %}
+        {% if event_card__image__src %}
+          {% include "@atoms/images/image/responsive-image.twig" with {
+            image_blockname: event_card__base_class,
+            output_image_tag: event_card__image__output_image_tag,
+            image_src: event_card__image__src,
+            image_alt: event_card__image__alt,
+          } %}
+        {% endif %}
+      {% endblock %}
+    </div>
+    <div {{ bem('meta--bottom', [], event_card__base_class) }}>
+      <div {{ bem('date', [], event_card__base_class) }}>
+        <span {{ bem('day', [], event_card__base_class) }}>
+          {{ event_card__date|date((format__day)) }}
+        </span>
+        <span {{ bem('month', [], event_card__base_class) }}>
+          {{ event_card__date|date((format__month)) }}
+        </span>
+      </div>
+      {% include "@molecules/menus/social/social-menu.twig" with {
+        social_menu_items: event_card__social_links,
+        menu_class: 'event-card__social',
+      } %}
+    </div>
+  </div>
+</div>
