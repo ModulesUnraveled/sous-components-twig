@@ -18,6 +18,20 @@
     cta__heading: item.cta__heading,
     cta__button_text: item.cta__button_text,
   } %}
+{% elseif item_type == 'event-card' %}
+  {% include "@molecules/cards/event/event-card.twig" with {
+    event_card__extra_classes: ['grid__item'],
+    event_card__modifiers: ['grid'],
+    event_card__heading: item.event_card__heading,
+    event_card__location: item.event_card__location,
+    event_card__body: item.event_card__body,
+    event_card__link__text: item.event_card__link__text,
+    event_card__link__url: item.event_card__link__url,
+    event_card__image__src: item.event_card__image__src,
+    event_card__image__alt: item.event_card__image__alt,
+    event_card__date: item.event_card__date,
+    event_card__social_links: item.event_card__social_links,
+  } %}
 {% else %}
   <div class="grid__item grid__item--example"></div>
 {% endif %}

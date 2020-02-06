@@ -2,34 +2,38 @@
 {% set format__month = 'F' %} {# December #}
 
 {% set event_card__base_class = 'event-card' %}
+{% set event_card__modifiers = event_card__modifiers|default(['list']) %}
+
 
 <div {{ bem(event_card__base_class, event_card__modifiers, event_card__blockname, event_card__extra_classes) }}>
   {# Content #}
-  <div {{ bem('content', event_card__content__modifiers, event_card__base_class) }}>
-    {# Heading #}
-    {% if event_card__heading %}
-      {{ title_prefix }}
-      {% include "@atoms/text/headings/_heading.twig" with {
-        heading_base_class: 'heading',
-        heading_blockname: event_card__base_class,
-        heading_level: 2,
-        heading: event_card__heading,
-        heading_url: event_card__heading__link|default(event_card__link__url),
-        heading_link_base_class: 'heading-link',
-        heading_link_blockname: event_card__base_class,
-      } %}
-      {{ title_suffix }}
-    {% endif %}
-    {# Location #}
-    {% if event_card__location %}
-      {% include "@atoms/text/headings/_heading.twig" with {
-        heading_base_class: 'location',
-        heading_blockname: event_card__base_class,
-        heading_level: 3,
-        heading: event_card__location,
-        heading_url: event_card__location__link,
-      } %}
-    {% endif %}
+  <div {{ bem('content', event_card__modifiers, event_card__base_class) }}>
+    <div {{ bem('content-top', [], event_card__base_class) }}>
+      {# Heading #}
+      {% if event_card__heading %}
+        {{ title_prefix }}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'heading',
+          heading_blockname: event_card__base_class,
+          heading_level: 2,
+          heading: event_card__heading,
+          heading_url: event_card__heading__link|default(event_card__link__url),
+          heading_link_base_class: 'heading-link',
+          heading_link_blockname: event_card__base_class,
+        } %}
+        {{ title_suffix }}
+      {% endif %}
+      {# Location #}
+      {% if event_card__location %}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'location',
+          heading_blockname: event_card__base_class,
+          heading_level: 3,
+          heading: event_card__location,
+          heading_url: event_card__location__link,
+        } %}
+      {% endif %}
+    </div>
     {# Body #}
     {% if event_card__body %}
       {% include "@atoms/text/text/01-paragraph.twig" with {
@@ -48,7 +52,7 @@
       } %}
     {% endif %}
   </div>
-  <div {{ bem('meta', [], event_card__base_class) }}>
+  <div {{ bem('meta', event_card__modifiers, event_card__base_class) }}>
     {# Image #}
     <div {{ bem('image', [], event_card__base_class) }}>
       {% block event_card__img %}
