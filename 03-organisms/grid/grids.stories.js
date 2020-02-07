@@ -6,6 +6,7 @@ import gridData from './grid.yml';
 import gridCardData from './grid-cards.yml';
 import gridCtaData from './grid-ctas.yml';
 import gridEventCardData from './grid-event-cards.yml';
+import gridNewsCardData from './grid-news-cards.yml';
 
 /**
  * Storybook Definition.
@@ -29,6 +30,13 @@ export const eventCardGrid = () => (
   <div
     dangerouslySetInnerHTML={{
       __html: grid({ ...gridData, ...gridEventCardData }),
+    }}
+  />
+);
+export const newsCardGrid = () => (
+  <div
+    dangerouslySetInnerHTML={{
+      __html: grid({ ...gridData, ...gridNewsCardData }),
     }}
   />
 );

@@ -32,6 +32,19 @@
     event_card__date: item.event_card__date,
     event_card__social_links: item.event_card__social_links,
   } %}
+{% elseif item_type == 'news-card' %}
+  {% include "@molecules/cards/news/news-card.twig" with {
+    news_card__extra_classes: ['grid__item'],
+    news_card__heading: item.news_card__heading,
+    news_card__location: item.news_card__location,
+    news_card__body: item.news_card__body,
+    news_card__link__text: item.news_card__link__text,
+    news_card__link__url: item.news_card__link__url,
+    news_card__image__src: item.news_card__image__src,
+    news_card__image__alt: item.news_card__image__alt,
+    news_card__date: item.news_card__date,
+    news_card__social_links: item.news_card__social_links,
+  } %}
 {% else %}
   <div class="grid__item grid__item--example"></div>
 {% endif %}
