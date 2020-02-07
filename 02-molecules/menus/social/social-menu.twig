@@ -25,6 +25,8 @@
                 {% include "@atoms/images/icons/_icon.twig" with {
                   icon_name: item.icon,
                   icon_blockname: menu_class,
+                  icon_title: item.title,
+                  icon_decorative: icon_decorative|default('true'),
                 } %}
                 <span {{ bem('text', [], menu_class) }}>{{ item.title }}</span>
               {% endblock %}
