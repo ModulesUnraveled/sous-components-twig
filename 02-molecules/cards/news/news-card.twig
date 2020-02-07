@@ -1,0 +1,83 @@
+{% set format__day = 'd' %}   {# 9 #}
+{% set format__month = 'M' %} {# Dec #}
+
+{% set news_card__base_class = 'news-card' %}
+
+<div {{ bem(news_card__base_class, news_card__modifiers, news_card__blockname, news_card__extra_classes) }}>
+  {# Content #}
+  <div {{ bem('content', news_card__modifiers, news_card__base_class) }}>
+    <div {{ bem('content-top', [], news_card__base_class) }}>
+      {# Heading #}
+      {% if news_card__heading %}
+        {{ title_prefix }}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'heading',
+          heading_blockname: news_card__base_class,
+          heading_level: 2,
+          heading: news_card__heading,
+          heading_url: news_card__heading__link|default(news_card__link__url),
+          heading_link_base_class: 'heading-link',
+          heading_link_blockname: news_card__base_class,
+        } %}
+        {{ title_suffix }}
+      {% endif %}
+      {# Subheading #}
+      {% if news_card__subheading %}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'subheading',
+          heading_blockname: news_card__base_class,
+          heading_level: 3,
+          heading: news_card__subheading,
+          heading_url: news_card__subheading__link,
+        } %}
+      {% endif %}
+    </div>
+    {# Body #}
+    {% if news_card__body %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_base_class: 'body',
+        paragraph_blockname: news_card__base_class,
+        paragraph_content: news_card__body,
+      } %}
+    {% endif %}
+    {# Link #}
+    {% if news_card__link__url %}
+      {% include "@atoms/links/link/link.twig" with {
+        link_base_class: 'link',
+        link_blockname: news_card__base_class,
+        link_content: news_card__link__text,
+        link_url: news_card__link__url,
+      } %}
+    {% endif %}
+  </div>
+  <div {{ bem('meta', news_card__modifiers, news_card__base_class) }}>
+    {# Image #}
+    <div {{ bem('image', [], news_card__base_class) }}>
+      {% block news_card__img %}
+        {% if news_card__image__src %}
+          {% include "@atoms/images/image/responsive-image.twig" with {
+            image_blockname: news_card__base_class,
+            output_image_tag: news_card__image__output_image_tag,
+            image_src: news_card__image__src,
+            image_alt: news_card__image__alt,
+          } %}
+        {% endif %}
+      {% endblock %}
+    </div>
+    <div {{ bem('meta--details', [], news_card__base_class) }}>
+      <div {{ bem('date', [], news_card__base_class) }}>
+        <span {{ bem('day', [], news_card__base_class) }}>
+          {{ news_card__date|date((format__day)) }}
+        </span>
+        <span {{ bem('month', [], news_card__base_class) }}>
+          {{ news_card__date|date((format__month)) }}
+        </span>
+      </div>
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_base_class: 'tag',
+        paragraph_blockname: news_card__base_class,
+        paragraph_content: news_card__tag,
+      } %}
+    </div>
+  </div>
+</div>
