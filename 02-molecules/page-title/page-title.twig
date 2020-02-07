@@ -1,0 +1,15 @@
+{#
+ # Available variables:
+ # - page_title: The page title (h1)
+ #}
+
+{% set page_title__base_class = 'page-title' %}
+
+<div {{ bem('wrapper', [], page_title__base_class) }}>
+  {# Section Heading #}
+  {% include "@atoms/text/headings/_heading.twig" with {
+    heading_base_class: page_title__base_class,
+    heading_level: '1',
+    heading: page_title,
+  } %}
+</div>
