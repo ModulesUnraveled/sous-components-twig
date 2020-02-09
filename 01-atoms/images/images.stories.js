@@ -9,7 +9,6 @@ import bgImageTwig from './background-image/background-image.twig';
 import imageData from './image/image.yml';
 import figureData from './image/figure.yml';
 import iconData from './icons/icons.yml';
-import bgImageData from './background-image/background-image.yml';
 
 import './background-image/background-image';
 
@@ -29,5 +28,5 @@ export const icons = () => (
 );
 export const backgroundImage = () => {
   useEffect(() => Drupal.attachBehaviors(), []);
-  return <div dangerouslySetInnerHTML={{ __html: bgImageTwig(bgImageData) }} />;
+  return <div dangerouslySetInnerHTML={{ __html: bgImageTwig() }} />;
 };
