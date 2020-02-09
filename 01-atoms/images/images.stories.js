@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from '@storybook/client-api';
 // Global Data
-import globalData from '../../_global-data/images.yml';
+import globalDataImages from '../../_global-data/images.yml';
 
 import image from './image/responsive-image.twig';
 import figure from './image/figure.twig';
@@ -34,7 +34,7 @@ export const backgroundImage = () => {
   return (
     <div
       className="cl-example"
-      dangerouslySetInnerHTML={{ __html: bgImageTwig(globalData) }}
+      dangerouslySetInnerHTML={{ __html: bgImageTwig(globalDataImages) }}
     />
   );
 };
@@ -45,7 +45,7 @@ export const backgroundImageWithContent = () => {
     <div
       className="cl-example"
       dangerouslySetInnerHTML={{
-        __html: bgImageTwig({ ...globalData, ...bgImageContent }),
+        __html: bgImageTwig({ ...globalDataImages, ...bgImageContent }),
       }}
     />
   );
