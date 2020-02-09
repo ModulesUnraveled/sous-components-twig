@@ -11,6 +11,7 @@ import bgImageTwig from './background-image/background-image.twig';
 import imageData from './image/image.yml';
 import figureData from './image/figure.yml';
 import iconData from './icons/icons.yml';
+import bgImageContent from './background-image/background-image--with-content.yml';
 
 import './background-image/background-image';
 
@@ -34,6 +35,18 @@ export const backgroundImage = () => {
     <div
       className="cl-example"
       dangerouslySetInnerHTML={{ __html: bgImageTwig(globalData) }}
+    />
+  );
+};
+
+export const backgroundImageWithContent = () => {
+  useEffect(() => Drupal.attachBehaviors(), []);
+  return (
+    <div
+      className="cl-example"
+      dangerouslySetInnerHTML={{
+        __html: bgImageTwig({ ...globalData, ...bgImageContent }),
+      }}
     />
   );
 };
