@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect } from '@storybook/client-api';
+// Global Data
+import globalData from '../../_global-data/images.yml';
 
 import image from './image/responsive-image.twig';
 import figure from './image/figure.twig';
@@ -28,5 +30,10 @@ export const icons = () => (
 );
 export const backgroundImage = () => {
   useEffect(() => Drupal.attachBehaviors(), []);
-  return <div dangerouslySetInnerHTML={{ __html: bgImageTwig() }} />;
+  return (
+    <div
+      className="cl-example"
+      dangerouslySetInnerHTML={{ __html: bgImageTwig(globalData) }}
+    />
+  );
 };

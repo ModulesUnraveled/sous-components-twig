@@ -1,3 +1,12 @@
+// This js will grab the src of an image inside a parent element with the data
+//   attribute`[data-responsive-background-image]` and set that as the
+//   background - image src of the parent element(with the data attribute.)
+// There is accompanying css that hides the original img element so that images
+//   are only displayed once.
+// We do all this so that our content provider (e.g. Drupal) can give us a fully
+//  responsive image set using `srcset`, `sizes`, etc. which we use as the css
+//  background image.
+// This level of responsiveness is not possible with css alone.
 Drupal.behaviors.backgroundImage = {
   attach() {
     class ResponsiveBackgroundImage {

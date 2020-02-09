@@ -1,30 +1,33 @@
 {#
-/**
- * Available variables:
- * - background_image__base_class - define the base class. Defaults to "background-image-wrapper"
- * - background_image__modifiers - array of modifiers to add to the base classname
- * - background_image__blockname - blockname prepended to the base classname
- * - background_image__src - the actual image file location
- *
- * Available blocks:
- * - background_image - use this to replace the image with a responsive one from Drupal, for example
- */
-#}
+ # Available variables:
+ # - background_image__base_class: The base class. Defaults to "background-image".
+ # - background_image__modifiers: An array of modifiers to add to the base classname.
+ # - background_image__blockname: The blockname is prepended to the base classname.
+ #
+ # Available blocks:
+ # - background_image: Used to replace the image with a responsive one from Drupal
+ # - background_image__content:
+ #}
 
-{{ attach_library("ithaca/background_image") }}
+{{ attach_library('sous_global/background-image') }}
 
-{% set background_image__base_class_var = background_image__base_class|default('background-image-wrapper') %}
+{% set background_image__base_class = background_image__base_class|default('background-image') %}
 
-<div
-  {{ bem(background_image__base_class_var, background_image__modifiers, background_image__blockname) }}
+<div {{ bem(background_image__base_class, background_image__modifiers, background_image__blockname) }}
   data-responsive-background-image>
-  {% block background_image %}
-    {% include "@atoms/images/image/responsive-image.twig" with {
-      output_image_tag: true,
-      image_blockname: background_image__base_class_var,
-      image_srcset: background_image__srcset|default("https://picsum.photos/320/180 320w, https://picsum.photos/480/270 480w, https://picsum.photos/640/360 640w, https://picsum.photos/800/450 800w, https://picsum.photos/960/540 960w, https://picsum.photos/1120/630 1120w, https://picsum.photos/1280/720 1280w, https://picsum.photos/1440/810 1440w, https://picsum.photos/1600/900 1600w, https://picsum.photos/1760/990 1760w, https://picsum.photos/1920/1080 1920w, https://picsum.photos/2080/1170 2080w, https://picsum.photos/2240/1260 2240w"),
-      image_sizes: background_image__sizes|default("100vw"),
-      image_src: background_image__src|default("https://picsum.photos/320/180"),
-    } %}
+  <div data-responsive-background-image--src>
+    {% block background_image %}
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        output_image_tag: true,
+        image_blockname: background_image_base_class_var,
+        image_srcset: image_srcset|default(image.sixteen_by_nine.responsive.srcset),
+        image_sizes: image_sizes|default(image.sixteen_by_nine.responsive.sizes),
+        image_src: image_src|default(image.sixteen_by_nine.responsive.src),
+      } %}
+    {% endblock %}
+  </div>
+  {% block background_image__content %}
+    {# Using raw for example purposes only #}
+    {{ background_image__content|raw }}
   {% endblock %}
 </div>
