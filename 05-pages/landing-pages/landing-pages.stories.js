@@ -2,6 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { hrefTo } from '@storybook/addon-links';
 import { useEffect } from '@storybook/client-api';
+// Global Data
+import globalDataImages from '../../_global-data/images.yml';
 
 import '../../02-molecules/menus/main-menu/main-menu';
 
@@ -23,6 +25,7 @@ hrefTo('Pages/Content Types', 'Article').then((url) => {
         dangerouslySetInnerHTML={{
           __html: home({
             page_layout_modifier: 'contained',
+            ...globalDataImages,
             ...mainMenuData,
             ...socialMenuData,
             ...footerMenuData,

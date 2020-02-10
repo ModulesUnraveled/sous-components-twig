@@ -40,17 +40,19 @@
   {% endblock %}
   {% block background_image__content %}
     <div {{ bem('content', [], hero__base_class) }}>
-      {# Heading #}
-      {% include "@atoms/text/headings/_heading.twig" with {
-        heading_level: '1',
-        heading_blockname: hero__base_class,
-        heading: hero__heading,
-      } %}
-      {# Content #}
-      {% include "@atoms/text/text/01-paragraph.twig" with {
-        paragraph_blockname: hero__base_class,
-        paragraph_content: hero__content,
-      } %}
+      <div {{ bem('content-inner', [], hero__base_class) }}>
+        {# Heading #}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_level: '1',
+          heading_blockname: hero__base_class,
+          heading: hero__heading,
+        } %}
+        {# Content #}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+          paragraph_blockname: hero__base_class,
+          paragraph_content: hero__content,
+        } %}
+      </div>
     </div>
   {% endblock %}
 {% endembed %}
