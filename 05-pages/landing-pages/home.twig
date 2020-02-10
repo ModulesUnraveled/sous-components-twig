@@ -18,33 +18,36 @@
     {% include "@organisms/grid/grid.twig" with {
       grid_label: 'Here\'s an awesome grid',
       grid_type: 'card',
-      item_type: 'card',
+      item_type: 'news-card',
       items: {
         1: {
-          card__image__src: "https://picsum.photos/id/987/480/300",
-          card__image__alt: "People",
-          card__image__output_image_tag: true,
-          card__heading: "Super Awesome Card",
-          card__link__url: card_link_url,
-          card__link__text: 'Click here',
-          card__subheading: "Person of Interest",
-          card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat."
+          news_card__image__src: "https://picsum.photos/id/987/480/300",
+          news_card__image__alt: "People",
+          news_card__image__output_image_tag: true,
+          news_card__heading: "Super Awesome Card",
+          news_card__link__url: card_link_url,
+          news_card__link__text: 'Click here',
+          news_card__subheading: "Person of Interest",
+          news_card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.",
+          news_card__tag: "People",
         },
         2: {
-          card__image__src: "https://picsum.photos/id/678/480/300",
-          card__image__alt: "Nature",
-          card__image__output_image_tag: true,
-          card__heading: "Card Number Two",
-          card__subheading: "Some pretty sweet nature",
-          card__body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo."
+          news_card__image__src: "https://picsum.photos/id/678/480/300",
+          news_card__image__alt: "Nature",
+          news_card__image__output_image_tag: true,
+          news_card__heading: "Card Number Two",
+          news_card__subheading: "Some pretty sweet nature",
+          news_card__body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo.",
+          news_card__tag: "Nature",
         },
         3: {
-          card__image__src: "https://picsum.photos/id/654/480/300",
-          card__image__alt: "Animals",
-          card__image__output_image_tag: true,
-          card__heading: "The Last Card Heading",
-          card__subheading: "Awesome animals",
-          card__body: "Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat."
+          news_card__image__src: "https://picsum.photos/id/654/480/300",
+          news_card__image__alt: "Animals",
+          news_card__image__output_image_tag: true,
+          news_card__heading: "The Last Card Heading",
+          news_card__subheading: "Awesome animals",
+          news_card__body: "Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat.",
+          news_card__tag: "Animals",
         }
       }
     } %}
