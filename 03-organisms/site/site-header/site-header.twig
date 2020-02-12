@@ -1,6 +1,6 @@
 {% set header__base_class = 'header' %}
 
-{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : 'sous-components-twig/images/logo.png' %}
+{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : header__logo_src|default('sous-components-twig/images/logo.png') %}
 
 <header {{ bem(header__base_class) }}>
   <div {{ bem('primary', [], header__base_class) }}>
