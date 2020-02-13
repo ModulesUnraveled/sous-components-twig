@@ -25,9 +25,10 @@ Drupal.behaviors.backgroundImage = {
       }
 
       update() {
-        const src = typeof this.img.currentSrc !== 'undefined'
-          ? this.img.currentSrc
-          : this.img.src;
+        const src =
+          typeof this.img.currentSrc !== 'undefined'
+            ? this.img.currentSrc
+            : this.img.src;
 
         if (this.src !== src) {
           this.src = src;
