@@ -1,22 +1,23 @@
 {% set page_layout_modifier = 'full' %}
 
 {% embed "@templates/full-width.twig" %}
-  {% block page_title %}
-    {% include "@molecules/hero/hero.twig" with {
-      hero__heading: 'Super awesome hero',
-      hero__content: "Here's some descriptive text for the hero.",
+	{% block page_title %}
+		{% include "@molecules/hero/hero.twig" with {
+      hero__heading: 'Discover Your Path',
     } %}
-  {% endblock %}
-  {% block page_content %}
-    {% include "@atoms/text/headings/_heading.twig" with {
+	{% endblock %}
+	{% block page_content %}
+		{% include "@atoms/text/headings/_heading.twig" with {
       heading_level: '2',
-      heading: 'Page Intro',
+      heading: 'One of the Nation\'s Great Universities',
     } %}
-    {% include "@atoms/text/text/01-paragraph.twig" with {
-      paragraph_content: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
+	{% include "@atoms/text/text/01-paragraph.twig" with {
+    paragraph_content: '<img src="https://source.unsplash.com/96DW4Pow3qI/500x300" alt="" class="mb-2 ml-5 pull-right"/><span class="lead">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</span>',
+
     } %}
-    {% include "@organisms/grid/grid.twig" with {
-      grid_label: 'Here\'s an awesome grid',
+    <hr class="divider"/>
+	{% include "@organisms/grid/grid.twig" with {
+      grid_label: 'Upcoming Events',
       grid_type: 'card',
       item_type: 'news-card',
       items: {
@@ -24,19 +25,19 @@
           news_card__image__src: "https://picsum.photos/id/987/480/300",
           news_card__image__alt: "People",
           news_card__image__output_image_tag: true,
-          news_card__heading: "Super Awesome Card",
+          news_card__heading: "Meet and Greet with the Chancellor",
           news_card__link__url: card_link_url,
-          news_card__link__text: 'Click here',
-          news_card__subheading: "Person of Interest",
-          news_card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.",
+          news_card__link__text: 'RSVP today',
+          news_card__subheading: "Mark Namerson Visits the Students",
+          news_card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.",
           news_card__tag: "People",
         },
         2: {
           news_card__image__src: "https://picsum.photos/id/678/480/300",
           news_card__image__alt: "Nature",
           news_card__image__output_image_tag: true,
-          news_card__heading: "Card Number Two",
-          news_card__subheading: "Some pretty sweet nature",
+          news_card__heading: "Hike the Hills and Valleys of PA",
+          news_card__subheading: "Visiting Our National Parks",
           news_card__body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo.",
           news_card__tag: "Nature",
         },
@@ -44,16 +45,19 @@
           news_card__image__src: "https://picsum.photos/id/654/480/300",
           news_card__image__alt: "Animals",
           news_card__image__output_image_tag: true,
-          news_card__heading: "The Last Card Heading",
-          news_card__subheading: "Awesome animals",
+          news_card__heading: "Going Ape for the Environmental Job Fair",
+          news_card__subheading: "Pittsburgh Zoo Hosts Environmental Job Fair in August",
           news_card__body: "Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat.",
           news_card__tag: "Animals",
         }
       }
     } %}
-    {% include "@molecules/cta/cta.twig" with {
-      cta__heading: 'Here\'s a cool thing!',
-      cta__button_text: 'Click me!',
+    <hr class="divider"/>
+	{% include "@molecules/cta/cta.twig" with {
+      cta__heading: 'World Class Library System',
+      cta__button_text: 'Visit in Virtual Reality',
+      cta__base_class: 'cta',
+      cta__modifiers: ['home'],
     } %}
-  {% endblock %}
+	{% endblock %}
 {% endembed %}
