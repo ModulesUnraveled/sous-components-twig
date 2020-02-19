@@ -1,22 +1,22 @@
 {% set page_layout_modifier = 'full' %}
 
 {% embed "@templates/full-width.twig" %}
-	{% block page_title %}
-		{% include "@molecules/hero/hero.twig" with {
+  {% block page_title %}
+    {% include "@molecules/hero/hero.twig" with {
       hero__heading: 'Discover Your Path',
     } %}
-	{% endblock %}
-	{% block page_content %}
-		{% include "@atoms/text/headings/_heading.twig" with {
+  {% endblock %}
+  {% block page_content %}
+    {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: '2',
       heading: 'One of the Nation\'s Great Universities',
     } %}
-	{% include "@atoms/text/text/01-paragraph.twig" with {
+  {% include "@atoms/text/text/01-paragraph.twig" with {
     paragraph_content: '<img src="https://source.unsplash.com/96DW4Pow3qI/500x300" alt="" class="mb-2 ml-5 pull-right"/><span class="lead">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</span>',
 
     } %}
     <hr class="divider"/>
-	{% include "@organisms/grid/grid.twig" with {
+  {% include "@organisms/grid/grid.twig" with {
       grid_label: 'Upcoming Events',
       grid_type: 'card',
       item_type: 'news-card',
@@ -53,11 +53,11 @@
       }
     } %}
     <hr class="divider"/>
-	{% include "@molecules/cta/cta.twig" with {
+  {% include "@molecules/cta/cta.twig" with {
       cta__heading: 'World Class Library System',
       cta__button_text: 'Visit in Virtual Reality',
       cta__base_class: 'cta',
       cta__modifiers: ['home'],
     } %}
-	{% endblock %}
+  {% endblock %}
 {% endembed %}
