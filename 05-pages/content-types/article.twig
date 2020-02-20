@@ -60,14 +60,17 @@ page_title: 'Assessment record repeat whiteboard, define reaction Moodle.',
       cta__heading: 'Education Podcast',
       cta__button_text: 'Subscribe',
     } %}
-    <h3>Upcoming Events</h3>
-    <ul>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-      <li>Aliquam tincidunt mauris eu risus.</li>
-      <li>Vestibulum auctor dapibus neque.</li>
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-    </ul>
-
-
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: '3',
+      heading: 'Upcoming Events',
+    } %}
+    {% include "@atoms/lists/ul.twig" with {
+      ul_items: {
+        1: { content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+        2: { content: 'Aliquam tincidunt mauris eu risus.' },
+        3: { content: 'Vestibulum auctor dapibus neque.' },
+        4: { content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+      },
+    } %}
   {% endblock %}
 {% endembed %}
