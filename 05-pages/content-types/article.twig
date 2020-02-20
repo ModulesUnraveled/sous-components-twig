@@ -1,16 +1,25 @@
 {% embed "@templates/with-sidebar.twig" with {
-  page_title: 'Super Awesome Article',
+  page_title: 'Assessment record repeat whiteboard, define reaction Moodle.',
 } %}
   {% block page_content %}
     {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: '2',
-      heading: 'Page Intro',
+      heading: 'Knowles Cognitive Information Processing reaction label draft training',
+    } %}
+    {% include "@atoms/images/image/responsive-image.twig" with {
+      output_image_tag: true,
+      image_src: 'https://source.unsplash.com/A_InfAQM_lU/1600x900',
+      image_alt: 'castle',
+      responsive_image_modifiers: ['mb-space']
     } %}
     {% include "@atoms/text/text/01-paragraph.twig" with {
       paragraph_content: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
     } %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_content: 'Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.',
+    } %}
     {% include "@organisms/grid/grid.twig" with {
-      grid_label: 'Here\'s an awesome grid',
+      grid_label: 'Development label repeat mints select pedagogy whiteboard click next asynchronous learning record instructional design',
       grid_type: 'card',
       item_type: 'card',
       items: {
@@ -18,17 +27,17 @@
           card__image__src: "https://picsum.photos/id/987/480/300",
           card__image__alt: "People",
           card__image__output_image_tag: true,
-          card__heading: "Super Awesome Card",
+          card__heading: "Assessment ipsum laboris incididunt list in consequat",
           card__link__url: "#",
-          card__link__text: card__link__text,
+          card__link__text: "Continue reading",
           card__subheading: "Person of Interest",
-          card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat."
+          card__body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh."
         },
         2: {
           card__image__src: "https://picsum.photos/id/678/480/300",
           card__image__alt: "Nature",
           card__image__output_image_tag: true,
-          card__heading: "Card Number Two",
+          card__heading: "Aliqua irure training, ullamco deserunt ad",
           card__subheading: "Some pretty sweet nature",
           card__body: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo."
         },
@@ -36,22 +45,33 @@
           card__image__src: "https://picsum.photos/id/654/480/300",
           card__image__alt: "Animals",
           card__image__output_image_tag: true,
-          card__heading: "The Last Card Heading",
+          card__heading: "SCORM anim assessment mints commodo",
           card__subheading: "Awesome animals",
-          card__body: "Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.. Nulla quis lorem ut libero malesuada feugiat."
+          card__body: "Tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat."
         }
       }
     } %}
     {% include "@molecules/cta/cta.twig" with {
-      cta__heading: 'Here\'s a cool thing!',
-      cta__button_text: 'Click me!',
+      cta__heading: 'See What Campus <br>Has For You',
+      cta__button_text: 'Request a Campus Visit',
     } %}
   {% endblock %}
   {% block page_sidebar %}
     {% include "@molecules/cta/cta.twig" with {
-      cta__heading: 'We have a podcast',
-      cta__button_text: 'Subscribe now!',
+      cta__heading: 'Education Podcast',
+      cta__button_text: 'Subscribe',
     } %}
-
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: '3',
+      heading: 'Upcoming Events',
+    } %}
+    {% include "@atoms/lists/ul.twig" with {
+      ul_items: {
+        1: { content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+        2: { content: 'Aliquam tincidunt mauris eu risus.' },
+        3: { content: 'Vestibulum auctor dapibus neque.' },
+        4: { content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' },
+      },
+    } %}
   {% endblock %}
 {% endembed %}

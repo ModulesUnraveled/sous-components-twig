@@ -1,0 +1,19 @@
+{% set text_with_image__base_class = 'text-with-image' %}
+
+<div {{ bem(text_with_image__base_class) }}>
+  <div {{ bem('image', [], text_with_image__base_class) }}>
+    {% block text_with_image__image %}
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        image_blockname: text_with_image__base_class,
+        output_image_tag: text_with_image__image__output_image_tag,
+        image_src: text_with_image__image__src,
+        image_alt: text_with_image__image__alt,
+      } %}
+    {% endblock %}
+  </div>
+  {% include "@atoms/text/text/01-paragraph.twig" with {
+    paragraph_blockname: text_with_image__base_class,
+    paragraph_base_class: 'text',
+    paragraph_content: text_with_image__text,
+  } %}
+</div>

@@ -1,7 +1,12 @@
 {% set cta__base_class = 'cta' %}
 <div {{ bem(cta__base_class, cta__modifiers, cta__blockname, cta__extra_classes) }}>
-  <h2>{{ cta__heading }}</h2>
+  {% include "@atoms/text/headings/_heading.twig" with {
+    heading_level: '2',
+    heading_blockname: cta__base_class,
+    heading: cta__heading,
+  } %}
   {% include "@atoms/buttons/button.twig" with {
+    button_blockname: cta__base_class,
     button_content: cta__button_text,
   } %}
 </div>
