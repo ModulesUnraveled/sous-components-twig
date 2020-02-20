@@ -5,7 +5,7 @@
     <li {{ bem("list", [], colors_base_class) }}>
       <div {{ bem("color", [item.value], colors_base_class) }}></div>
       <div {{ bem("sg-info") }}>
-        <code>${{ item.value }}</code>
+        <code>{{ item.value }}</code>
       </div>
     </li>
   {% endfor %}
