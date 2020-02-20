@@ -1,6 +1,6 @@
 {
   "name": "sous-components-twig",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "Twig components for a fictitious Sous install",
   "dependencies": {
     "cross-env": "5.0.5",
