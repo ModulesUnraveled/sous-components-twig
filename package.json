@@ -4,8 +4,7 @@
   "description": "Twig components for a fictitious Sous install",
   "dependencies": {
     "cross-env": "5.0.5",
-    "eslint-config-prettier": "^6.10.0",
-    "sous-scss": "^0.0.1"
+    "eslint-config-prettier": "^6.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
