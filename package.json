@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ModulesUnraveled/wester-up.git"
+    "url": "git+https://github.com/emulsify-ds/western-up-twig.git"
   },
   "author": "Brian Lewis",
   "bugs": {
-    "url": "https://github.com/ModulesUnraveled/wester-up/issues"
+    "url": "https://github.com/emulsify-ds/western-up-twig/issues"
   },
-  "homepage": "https://github.com/ModulesUnraveled/wester-up#readme"
+  "homepage": "https://github.com/emulsify-ds/western-up-twig#readme"
 }
