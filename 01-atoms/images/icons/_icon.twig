@@ -13,10 +13,10 @@
 {% set icon_base_class = icon_base_class|default('icon') %}
 {% set icon_url = directory ? '/' ~ directory ~ '/dist/' %}
 
-{# IE 11 support for SVG use - remove if not needed. 
-## See also sous.libraries.yml to remove library.
+{# IE 11 support for SVG use - remove if not needed.
+## See also western_up.libraries.yml to remove library.
 #}
-{{ attach_library('sous/sprite') }}
+{{ attach_library('western_up/sprite') }}
 
 <svg {{ bem(icon_base_class, icon_modifiers, icon_blockname, icon_extra_class) }}
 
