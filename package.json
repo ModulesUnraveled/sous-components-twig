@@ -1,6 +1,6 @@
 {
   "name": "western-up-twig",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Twig components for a fictitious University install",
   "dependencies": {
     "cross-env": "5.0.5",
