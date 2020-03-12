@@ -9,26 +9,12 @@
  #
  #}
 
-{# Re-define the background image block so that Drupal can replace it #}
-{# {% set background_image %}
-  {% block hero__image %}
-    {% include "@atoms/images/image/responsive-image.twig" with {
-      output_image_tag: true,
-      image_blockname: background_image_base_class_var,
-      image_srcset: image_srcset|default(image.sixteen_by_nine.responsive.srcset),
-      image_sizes: image_sizes|default(image.sixteen_by_nine.responsive.sizes),
-      image_src: image_src|default(image.sixteen_by_nine.responsive.src),
-    } %}
-  {% endblock %}
-{% endset %} #}
-
 {# Markup begins here #}
 {% set hero__base_class = 'hero' %}
+{% set background_image__base_class = hero__base_class %}
 
 {# Background Image #}
-{% embed "@atoms/images/background-image/background-image.twig" with {
-  background_image__base_class: hero__base_class,
-} %}
+{% extends "@atoms/images/background-image/background-image.twig" %}
   {% block background_image %}
     {% include "@atoms/images/image/responsive-image.twig" with {
       output_image_tag: true,
@@ -55,4 +41,3 @@
       </div>
     </div>
   {% endblock %}
-{% endembed %}
