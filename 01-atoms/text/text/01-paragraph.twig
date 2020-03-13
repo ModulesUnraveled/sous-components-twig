@@ -15,6 +15,7 @@
 
 <p {{ bem(paragraph_base_class, paragraph_modifiers, paragraph_blockname) }}>
   {% block paragraph_content %}
-    {{ paragraph_content }}
+    {# We use raw to accommodate Drupal's wysiwyg #}
+    {{ paragraph_content|raw }}
   {% endblock %}
 </p>
