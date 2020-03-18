@@ -12,7 +12,7 @@
 {% endif %}
 
 {% if custom_modifiers %}
-  {% set main_modifiers = main_modifiers|merge([custom_modifiers]) %}
+  {% set main_modifiers = main_modifiers|merge(custom_modifiers) %}
 {% endif %}
 
 <div {{ bem('layout-container', layout_modifiers) }}>
