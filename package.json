@@ -3,7 +3,6 @@
   "version": "0.0.40",
   "description": "Twig components for a fictitious University install",
   "dependencies": {
-    "cross-env": "5.0.5",
     "eslint-config-prettier": "^6.10.0"
   },
   "scripts": {
