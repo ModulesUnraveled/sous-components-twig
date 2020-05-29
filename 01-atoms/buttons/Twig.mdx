@@ -1,0 +1,39 @@
+---
+title: "Button Twig"
+description: "This is the button component Twig"
+tab: "Twig"
+tabOrder: 2
+publishToStyleGuide: true
+---
+
+# Button Twig
+
+Below you will see the buttons for this project using Twig
+
+## Default Usage
+
+<StorybookComponent id="atoms-buttons--default" height="75px" />
+
+```js
+{% include "@atoms/buttons/button.twig" %}
+```
+
+## Alternative Button Usage
+
+<StorybookComponent id="atoms-buttons--alt" height="65px" />
+
+```js
+{% include "@atoms/buttons/button.twig" with {
+  button_modifiers: ['alt']
+} %}
+```
+
+## Second Alternative Button Usage
+
+<StorybookComponent id="atoms-buttons--alt-2" height="70px" />
+
+```js
+{% include "@atoms/buttons/button.twig" with {
+  button_modifiers: ['alt-2']
+} %}
+```

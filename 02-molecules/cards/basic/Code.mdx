@@ -1,0 +1,26 @@
+---
+title: "Cards"
+tab: "Code"
+tabOrder: 1
+publishToStyleGuide: true
+---
+
+# Card Component
+
+Below you will see all the buttons for this project with the corresponding HTML.
+
+<StorybookComponent id="molecules-cards--card" height="600px" />
+
+```js
+{% embed "@molecules/cards/basic/card.twig" with {
+  card__heading: 'This is the card heading',
+  card__subheading: 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus',
+  card__body: 'ellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.',
+  card__link__text: 'Read more about this card',
+  card__link__url: '#',
+} %}
+  {% block card__img %}
+    {{ content.DRUPAL_IMAGE }}
+  {% endblock %}
+{% endembed %}
+```
