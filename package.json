@@ -1,6 +1,6 @@
 {
   "name": "western-up-twig",
-  "version": "0.0.40",
+  "version": "0.0.45",
   "description": "Twig components for a fictitious University install",
   "dependencies": {
     "eslint-config-prettier": "^6.10.0"
